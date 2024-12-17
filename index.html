@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Ninja</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📈 Financial Ninja</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#calculator">Financial Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+  
+      <!-- Dark Mode Toggle -->
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+            </nav>
+           
+              
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="ml11">
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters">Welcome to Financial Ninja</span>
+                </span>
+              </h1>
+              
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            <h2>Your Guide to Financial Freedom</h2>
+            <p>Explore tools, articles, and insights to master your finances.</p>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="section articles">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Investing 101</h3>
+                    <p>A beginner's guide to investing and growing your wealth.</p>
+                    <a href="Articles/investing-101.html" class="btn">Read More</a>
+                </div>
+                <div class="card">
+                    <h3>Top Finance Apps</h3>
+                    <p>Discover the best apps to manage your budget.</p>
+                    <a href="Articles/top-5-finance-apps.html" class="btn">Read More</a>
+                </div>
+                <div class="card">
+                    <h3>Stock Market Trends</h3>
+                    <p>Learn how to analyze stock market patterns.</p>
+                    <a href="Articles/stock-market-trends.html" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Tools Section -->
+    <section id="calculator" class="section calculator">
+        <div class="container">
+            <h2>Financial Tools</h2>
+            <div class="calculator-grid">
+                <!-- Retirement Savings Calculator -->
+                <div class="calculator-card">
+                    <h3>Retirement Savings</h3>
+                    <form id="retirementCalculatorForm">
+                        <div class="input-card">
+                            <label for="currentAge">Current Age:</label>
+                            <input type="number" id="currentAge" placeholder="30" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="retirementAge">Retirement Age:</label>
+                            <input type="number" id="retirementAge" placeholder="65" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="currentSavings">Current Savings ($):</label>
+                            <input type="number" id="currentSavings" placeholder="10000" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="monthlyContribution">Monthly Contribution ($):</label>
+                            <input type="number" id="monthlyContribution" placeholder="500" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="annualReturn">Annual Return (%):</label>
+                            <input type="number" id="annualReturn" placeholder="5" required>
+                        </div>
+                        <button type="button" id="calculateRetirement" class="btn">Calculate</button>
+                    </form>
+                </div>
+
+                <!-- Budget Planner -->
+                <div class="calculator-card">
+                    <h3>Budget Planner</h3>
+                    <form id="budgetPlannerForm">
+                        <div class="input-card">
+                            <label for="income">Monthly Income ($):</label>
+                            <input type="number" id="income" placeholder="4000" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="expenses">Monthly Expenses ($):</label>
+                            <input type="number" id="expenses" placeholder="3000" required>
+                        </div>
+                        <button type="button" id="calculateBudget" class="btn">Calculate</button>
+                    </form>
+                </div>
+
+                <!-- Expense Tracker -->
+                <div class="calculator-card">
+                    <h3>Expense Tracker</h3>
+                    <form id="expenseTrackerForm">
+                        <div class="input-card">
+                            <label for="expenseDescription">Expense Description:</label>
+                            <input type="text" id="expenseDescription" placeholder="Groceries" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="expenseAmount">Amount ($):</label>
+                            <input type="number" id="expenseAmount" placeholder="200" required>
+                        </div>
+                        <div class="input-card">
+                            <label for="expenseCategory">Category:</label>
+                            <select id="expenseCategory">
+                                <option value="Food">Food</option>
+                                <option value="Transportation">Transportation</option>
+                                <option value="Utilities">Utilities</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <button type="button" id="addExpense" class="btn">Add Expense</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are Financial Ninja, a team of financial experts passionate about helping individuals and businesses achieve their financial goals. From calculators to expert articles, we offer everything you need to master personal finance.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Located in Riyadh, King Abdullah Financial District (KAFD)</p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.973917728935!2d46.6832175!3d24.7135515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f035aaf99b711%3A0x33fcd37bfcd9f60b!2sKing%20Abdullah%20Financial%20District!5e0!3m2!1sen!2ssa!4v1686765450601!5m2!1sen!2ssa"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p>Email: <a href="mailto:info@financialninja.com">info@financialninja.com</a></p>
+            <p>Phone: <a href="tel:+966123456789">+966 12 345 6789</a></p>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Financial Ninja. All rights reserved.</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook si"></i>
+                <i class="fa-brands fa-twitter si"></i>
+                <i class="fa-brands fa-instagram si"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
